@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-arsh-blue: #003A63;
+  --color-arsh-gold: #9C7D0D;
+  --color-arsh-paper: #FFFBF2;
+  --color-arsh-platinum: #F3F4F6;
+  --color-arsh-white: #FFFFFF;
+  --color-arsh-charcoal: #1F2937;
+  --color-arsh-copper: #B85C38;
+  --color-arsh-beige: #E1D0A9;
+  --color-arsh-lightblue: #9AABC6;
+  
+  /* Font */
+  --font-family-sans: 'Readex Pro', system-ui, sans-serif;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-arsh-blue);
+  outline-offset: 2px;
+}
+
+/* RTL specific utilities */
+[dir="rtl"] .dir-ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+[dir="rtl"] .dir-ltr input {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-arsh-platinum);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-arsh-lightblue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-arsh-blue);
+}
+
+/* Number input spinner hidden */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-arsh-gold);
+  color: white;
+}
